@@ -253,8 +253,25 @@ for i in range(1,20,2):
 
 #Print Alphabet pyramid (A, BB, CCC) pattern
 #A = 65 and a = 97
+'''
 num = 65
 counter = 1
 for i in range(65,65+5):
     print(chr(i )*counter)
     counter += 1
+'''
+
+#Hollow square pattern
+'''
+n = 5
+t = "*"
+for i in range(0,5):
+    for j in range(0,5):
+        if i>0 and i<4 and j>0 and j<4:
+            print(" ",end=" ")
+        else:
+            print(t,end=" ")
+    print()
+'''
+
+#Print pyramid pattern of stars
