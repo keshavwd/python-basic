@@ -224,3 +224,27 @@ if n == total:
 else:
     print(f"Number {n} is not an Armstrong Number.")
 '''
+
+#Print right-angled triangle Number Pattern using a Loop
+'''
+n = 5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()
+'''
+
+#Print the decreasing pattern
+'''
+n = 5
+for i in range(n,0,-1):
+    #print(i)
+    for j in range(i,0,-1):
+        print(j,end=" ")
+    print()
+'''
+
+#Print the alternate numbers pattern
+n = 20
+for i in range(1,20,2):
+    print(i,end=" ")
