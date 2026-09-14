@@ -1,3 +1,4 @@
+#https://pynative.com/python-if-else-and-for-loop-exercise-with-solutions/
 #Print first 10 natural numbers using while loop
 '''
 n = 1
@@ -84,4 +85,108 @@ print(nlist)
 '''
 
 #Print list in reverse order using a loop
+'''
 list1 = [10, 20, 30, 40, 50]
+res = []
+for i in range(len(list1),0,-1):
+    res.append(list1[i-1])
+print(res)
+'''
+
+#Reverse a string using a for loop (no slicing)
+s = "Python"
+'''
+s1=s[::-1]
+print(s1)
+'''
+'''
+s1 = ""
+for ch in s:
+    s1 = ch + s1
+print(s1)
+'''
+
+#Count vowels and consonants in a sentence
+'''
+s = "Loops are Fun!"
+vovel = "aeiou"
+cons = 0
+vov = 0
+for ch in s.lower():
+    if ch.isalpha():
+        if ch in vovel:
+            vov += 1
+        else:
+            cons += 1
+print(vov, "count")
+print(cons, "count")
+'''
+
+#Count total number of digits in a number
+'''
+n = int(input("Enter the digits: "))
+count = 0
+while n > 0: 
+    #print(12345//10)
+    res = n//10
+    count += 1
+    n = res
+'''
+
+#Reverse an integer number
+'''
+n = 76542
+res = 0
+while n > 0:
+    va = n%10
+    res = (res*10)+va
+    n = n//10
+    
+print(res)
+'''
+
+#Find largest and smallest digit in a number
+'''
+num = 75869
+li = []
+ma = 0
+mi = 0
+while num > 0:
+    li.append(num%10)
+    num = num//10
+
+a = 0
+b = 9
+for n in li:
+    if n > a:
+        a = n
+    elif n < b:
+        b = n
+print(f"Max: {a} and Min: {b}")
+'''
+
+#Check if a number is a palindrome
+'''
+num1 = int(input("Enter the number: "))
+num = num1
+res = 0
+while num > 0:
+    res = (res*10)+num%10
+    num = num//10
+if num1 == res:
+    print(f"Number is palindrome NUM: {num1} and RES: {res}")
+else:
+    print(f"Number is not palindrome NUM: {num1} and RES: {res}")
+'''
+
+#Find factorial of a number
+num = int(input("Enter the number to get factorial: "))
+sp = 1
+if num < 0:
+    print("Factorial doesnot exist for a negative number.")
+elif num == 0:
+    print("Factorial of 0 is 1.")
+else:
+    for i in range(1,num+1):
+        sp = sp*i
+    print(f"Factorial for {num} is {sp}.")
