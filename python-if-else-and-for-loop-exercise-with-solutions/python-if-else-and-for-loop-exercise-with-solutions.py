@@ -180,6 +180,7 @@ else:
 '''
 
 #Find factorial of a number
+'''
 num = int(input("Enter the number to get factorial: "))
 sp = 1
 if num < 0:
@@ -190,3 +191,36 @@ else:
     for i in range(1,num+1):
         sp = sp*i
     print(f"Factorial for {num} is {sp}.")
+'''
+
+#Collatz Conjecture: Generate a sequence until it reaches 1
+'''
+n = 6
+li = [n]
+while n > 1:
+    if n%2==0:
+        n = n//2
+        #print(n)
+        li.append(n)
+    else:
+        n = (n*3)+1
+        #print(n)
+        li.append(n)
+print(li)
+'''
+
+#Armstrong Number Check (for a 3 digi number the sum of cube of each digit is same as the 3 digit number)
+'''
+n = int(input("Enter the number: "))
+n1 = n
+nlength = len(str(n1))
+total = 0
+while n1>0:
+    d = n1%10
+    total += d**nlength
+    n1 = n1//10
+if n == total:
+    print(f"Number {n} is Armstrong Number.")
+else:
+    print(f"Number {n} is not an Armstrong Number.")
+'''
