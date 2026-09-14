@@ -245,6 +245,16 @@ for i in range(n,0,-1):
 '''
 
 #Print the alternate numbers pattern
+'''
 n = 20
 for i in range(1,20,2):
     print(i,end=" ")
+'''
+
+#Print Alphabet pyramid (A, BB, CCC) pattern
+#A = 65 and a = 97
+num = 65
+counter = 1
+for i in range(65,65+5):
+    print(chr(i )*counter)
+    counter += 1
