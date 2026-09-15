@@ -328,4 +328,16 @@ print(li)
 '''
 
 #Remove duplicates without set
-li = [1, 2, 2, 3, 4, 4, 4, 5]
+'''
+li = [1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 6, 6]
+li1 = []
+for i in li:
+    if i in li1:
+        continue
+    else:
+        li1.append(i)
+print(li1)
+'''
+
+#Even/Odd Segregation: Move evens to front, odds to back
+li = [1, 2, 3, 4, 5, 6]
