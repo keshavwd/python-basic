@@ -288,8 +288,30 @@ for i in range(n-1,0,-1):
 '''
 
 #Print full multiplication table (1 to 10)
+'''
 n = 10
 for i in range(1,n+1):
     for j in range(1,n+1):
         print(i*j,end="\t")
     print()
+'''
+
+#List Cumulative Sum: Each element is the sum of all previous
+'''
+l1 = [1, 2, 3, 4]
+l2 = []
+res = 0
+for i in l1:
+    res = res+l1[i-1]
+    l2.append(res)
+print(l2)
+'''
+
+#Dictionary Filter: Extract pairs where value exceeds a threshold.
+'''
+scores = {"Alice": 85, "Bob": 70, "Charlie": 95, "David": 60} #threshold = 75
+for key,value in scores.items():
+    #print(value)
+    if value > 75:
+        print(key,value)
+'''
