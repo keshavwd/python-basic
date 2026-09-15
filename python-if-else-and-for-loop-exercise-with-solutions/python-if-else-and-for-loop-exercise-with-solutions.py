@@ -315,3 +315,17 @@ for key,value in scores.items():
     if value > 75:
         print(key,value)
 '''
+
+#Find common elements (Intersection) using loop
+'''
+list_a = [1, 2, 3, 4, 5]
+list_b = [4, 5, 6, 7, 8]
+li = []
+for i in list_a:
+    if i in list_b:
+        li.append(i)
+print(li)
+'''
+
+#Remove duplicates without set
+li = [1, 2, 2, 3, 4, 4, 4, 5]
