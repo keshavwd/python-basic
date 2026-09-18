@@ -340,4 +340,33 @@ print(li1)
 '''
 
 #Even/Odd Segregation: Move evens to front, odds to back
+'''
 li = [1, 2, 3, 4, 5, 6]
+lio = []
+lie = []
+for i in li:
+    if i%2==0:
+        lie.append(i)
+    else:
+        lio.append(i)
+lie+=lio
+print(lie)
+'''
+
+#List Rotation: Rotate elements left by k positions
+'''
+nums = [1, 2, 3, 4, 5]
+k = 2
+blist = []
+newlist = []
+for i in nums:
+    
+    if nums.index(i) < k:
+        blist.append(i)
+    else:
+        newlist.append(i)
+newlist+=blist
+print(newlist)
+'''
+
+#Word frequency counter
