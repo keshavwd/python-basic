@@ -370,3 +370,127 @@ print(newlist)
 '''
 
 #Word frequency counter
+'''
+text = "apple banana apple orange banana apple"
+words = text.split()
+repeat = {}
+for word in words:
+    if word in repeat:
+        repeat[word] += 1
+    else:
+        repeat[word] = 1
+print(repeat)
+'''
+
+#Display fibonacci series up to 10 terms
+'''
+n_terms = 10
+a = 0
+b = 1
+res = 1
+listL = []
+for i in range(0,10):
+    if i==0:
+        listL.append(0)
+    elif i == 1:
+        listL.append(1)
+
+    if i > 1:
+        res = a + b
+        a = b
+        b = res
+        listL.append(res)
+print(listL)
+'''
+
+#Perfect number check
+'''
+num = int(input('Enter the number to check if it is a pr=erfect number or not: '))
+n = 1
+li = []
+res = 0
+while n < 28:
+    if num%n==0:
+        #print(n)
+        li.append(n)
+        res += n
+    n += 1
+if num == res:
+    print(f"{li} is equal to the sum which is {res}. It is a perfect number.")
+else:
+    print("It is not a perfect number.")
+'''
+
+#Binary to decimal conversion using loop
+'''
+bi = 1101101010
+bi = str(bi) 
+rbi = bi[::-1]
+res = 0
+#print(bi)
+for i in range(len(rbi)):
+    #print(rbi)
+    if rbi[i]=='1':
+        res += 2**i
+print(res)
+'''
+
+#Display all prime numbers within a range
+'''
+start = int(input("Enter the starting value: "))
+end = int(input("Enter the ending value: "))
+count= 0
+li = []
+for num in range(start,end+1):
+    if num > 1:
+        for i in range(2,num):
+            if num%i==0:
+                break
+        else:
+            #print(num)
+            li.append(num)
+            count += 1
+print(li)
+print(count)
+'''
+
+#Find the sum of the series up to n terms
+'''
+n = 5
+num = 2
+b = num
+li = []
+for i in range(n):
+    if i==0:
+        li.append(num)
+    else:
+        b = (b*10)+num
+        li.append(b)
+print(li)
+print(sum(li))
+'''
+
+#flatten a nested list using loops
+'''
+nested_list = [[10, 20], [30, 40], [50, 60]]
+li = []
+li2 = []
+for i in nested_list:
+    li.extend(i)
+print(li)
+for a in nested_list:
+    for i in a:
+        li2.append(i)
+print(li2)
+'''
+
+#Nested list search (2D matrix coordinates)
+matrix = [[10, 20], [30, 40], [50, 60]]
+target = 30
+res = {}
+for i in range(len(matrix)):
+    for j in range(len(matrix[i])):
+        if matrix[i][j] == target:
+            res['row'] = i
+            res['col'] = j
+print(res)
