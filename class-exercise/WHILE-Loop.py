@@ -94,3 +94,25 @@ print(li)
 '''
 
 #Write a program to implement a number guessing game using a while loop.
+'''
+import random
+snum = random.randint(1,100)
+mynum = int(input("Enter the number you guess: "))
+attempt = 0
+while True:
+    if attempt < 6:    
+        if mynum < snum:
+            print(f"{mynum} is smaller than the number.")
+            attempt += 1
+            input(f"Enter to move forward...You have {7 - attempt} left")
+            mynum = int(input("Enter the number you guess: "))
+        elif mynum > snum:
+            print(f"{mynum} is greater than the number.")
+            attempt += 1
+            input(f"Enter to move forward...You have {7 - attempt} left")
+            mynum = int(input("Enter the number you guess: "))
+        else:
+            print(f'Congratulation. {mynum} is the correct guess.')
+            input("Enter to move forward...")
+            break
+'''
